@@ -6,18 +6,18 @@
 //  While truthy value is true when it is not any value of falsey values
 // console.log(Boolean(0));
 
-let accBalance = {};
-if (accBalance) {
-  console.log("You have some cash");
-} else {
-  console.log("issuficient Fund");
-}
-let red = null;
-if (red) {
-  console.log("White");
-} else {
-  console.log("Yellow");
-}
+// let accBalance = {};
+// if (accBalance) {
+//   console.log("You have some cash");
+// } else {
+//   console.log("issuficient Fund");
+// }
+// let red = null;
+// if (red) {
+//   console.log("White");
+// } else {
+//   console.log("Yellow");
+// }
 
 // Logical operators: (AND, OR, NOT)
 // AND - with this operator, when two or more conditions are true it automatically means true but if one value is fasle it will pront out false
@@ -27,13 +27,13 @@ if (red) {
 // OR -||
 // NOT -!
 
-const writeCode = true;
-const writeMovies = false;
+// const writeCode = true;
+// const writeMovies = false;
 
-console.log(writeCode && writeMovies);
-console.log(writeCode || writeMovies);
-console.log(!writeCode);
-console.log(!writeMovies);
+// console.log(writeCode && writeMovies);
+// console.log(writeCode || writeMovies);
+// console.log(!writeCode);
+// console.log(!writeMovies);
 
 // How to take decision with logical operators
 // let canEnrole = false;
@@ -65,17 +65,80 @@ console.log(!writeMovies);
 //     console.log("You need to pay 30% before you can be admitted")
 // }
 // three values
-let canEnrole = false;
-let student = false;
-let scholarship = true;
+// let canEnrole = false;
+// let student = false;
+// let scholarship = true;
 
-console.log((!canEnrole && student) || scholarship);
+// console.log((!canEnrole && student) || scholarship);
 
-let age = "2"
-let fit = "18"
+// let age = "2"
+// let fit = "18"
 
-if (age >=18 || fit <= 50) {
-    console.log("you passed your driving test");
-} else{
-    console.log("you failed your driving test");
+// if (age >=18 || fit <= 50) {
+//     console.log("you passed your driving test");
+// } else{
+//     console.log("you failed your driving test");
+// }
+// function myFunction() {
+//   document.getElementById("myDropdown").classList.toggle("show");
+// }
+
+// // Close the dropdown if the user clicks outside of it
+// window.onclick = function(event) {
+//   if (!event.target.matches('.dropdownbtn')) {
+//     var dropdowns = document.getElementsByClassName("dropdown-content");
+//     var i;
+//     for (i = 0; i < dropdowns.length; i++) {
+//       var openDropdown = dropdowns[i];
+//       if (openDropdown.classList.contains('show')) {
+//         openDropdown.classList.remove('show');
+//       }
+//     }
+//   }
+// }
+
+
+// console.log(Boolean(0));
+// console.log(Boolean(null));
+// console.log(Boolean(undefined));
+// console.log(Boolean(NaN));
+// console.log(Boolean([]));
+// console.log(Boolean({}));
+// console.log(Boolean(""));
+
+// Task 49B
+let drink;
+
+if (drink) {
+  console.log("Don't Drink Malt");
+} else {
+  console.log("Drink Fanta");
+}
+
+let animal = 0;
+
+if (animal) {
+  console.log("Goat");
+} else {
+  console.log("Cow");
+}
+
+let color = "";
+
+if (color) {
+  console.log("Green");
+} else {
+  console.log("Red");
+}
+
+// Access control with AND/OR
+
+let hasLicense = true;
+let isSober = true;
+let isUnderObservation = true;
+
+const driver = hasLicense && isSober !isUnderObserva
+
+if (hasLicense) {
+
 }
