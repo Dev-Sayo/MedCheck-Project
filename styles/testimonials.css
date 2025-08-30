@@ -201,7 +201,7 @@ body {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
-/* hamburger menu */
+/* hamburger menu
 .dropdown-content {
   display: none;
   width: 100%;
@@ -240,7 +240,7 @@ letter-spacing: -0.03em;
 line-height: 28px;
 font-weight: 500;
 }
-.show {display: block;}
+.show {display: block;} */
 /* Testimonials section */
 .what-we-do {
   padding-block: 9rem;

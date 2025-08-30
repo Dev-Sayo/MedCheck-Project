@@ -156,7 +156,7 @@ body {
 .dropdown-2 {
   position: relative;
 }
-.dropdown-content a {
+.dropdown-content-1 a {
   display: block;
   text-decoration: none;
   color: #00c503;
@@ -167,10 +167,7 @@ body {
   line-height: 28px;
   font-weight: 500;
 }
-.hamburger {
-  display: none;
-}
-.dropdown-content {
+.dropdown-content-1 {
   display: none;
   position: absolute;
   top: 60px;
@@ -191,7 +188,7 @@ body {
   justify-content: flex-end;
   padding: 5px 10px;
 }
-.dropdown-content a:hover {
+.dropdown-content-1 a:hover {
   background-color: #3e8e41;
   color: var(--white-color);
 }
@@ -201,6 +198,51 @@ body {
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
+/* hamburger menu */
+.hamburger {
+  display: inline-block;
+  position: relative;
+  display: none;
+}
+.dropdown-content {
+  display: none;
+  width: 100%;
+  position: absolute;
+  right: -10px;
+  top: 2rem;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content ul li{
+  list-style-type: none;
+}
+.dropdown-content li a{
+  text-decoration: none;
+  color: var(--lighter-green);
+  font-size: 18px;
+}
+.menu a:hover{
+  background: #007900;
+  color: var(--white-color);
+  width: 100%;
+}
+.menu {
+align-self: stretch;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+padding: 5px 10px;
+}
+.service {
+position: relative;
+letter-spacing: -0.03em;
+line-height: 28px;
+font-weight: 500;
+}
+.show {display: block;}
 /* Report a product */
 .report-a-product-parent {
   width: 90%;
@@ -357,13 +399,15 @@ select {
   color: var(--white-color);
   display: none;
 }
+.frame-container{
+  width: 100%;
+}
 .upload-container {
+  max-width: 100%;
   background-color: rgba(255, 255, 255, 0.3);
   border: 1.5px dashed rgba(166, 166, 166, 0.5);
   height: 194px;
-  max-width: 100%;
   width: 441px;
-  min-width: 100%;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -380,6 +424,7 @@ select {
   line-height: 24px;
   color: var(--black-color);
   font-size: 16px;
+  padding-bottom: 1rem;
 }
 .upload-btn {
   background: #ddd;
@@ -533,6 +578,6 @@ input {
     gap: 30px;
   }
   ::placeholder {
-  font-size: 16px;
+  font-size: 12px;
 }
 }

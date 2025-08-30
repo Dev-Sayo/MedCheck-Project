@@ -79,15 +79,43 @@
             src="images/expand-up-down-line.svg"
             id="frameIcon1"
           />
-          <div class="dropdown-content">
+          <div class="dropdown-content-1">
             <div class="link"><a href="#">Profile</a></div>
             <div class="link"><a href="#">History</a></div>
             <div class="link"><a href="#">Logout</a></div>
           </div>
         </div>
         <div class="hamburger">
-          <img src="images/menu-line.svg" alt="" />
-          <!-- <i class="fa-solid fa-bars fa-2xl" style="color: #000000"></i> -->
+          <button onclick="myFunction()" class="dropdownbtn">
+            <img src="images/menu-line.svg" alt="" />
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <ul>
+              <li class="menu">
+                <a class="service" href="#">Verify Product</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="report-a-product.html"
+                  >Report Product</a
+                >
+              </li>
+              <li class="menu">
+                <a class="service" href="awareness-page.html">Awareness</a>
+              </li>
+              <li class="menu"><a class="service" href="#">Profile</a></li>
+              <li class="menu"><a class="service" href="#">History</a></li>
+              <li class="menu">
+                <a class="service" href="community-gist.html">Community</a>
+              </li>
+              <li class="menu">
+                <a class="service" href="index.html">Testimonies</a>
+              </li>
+              <li class="menu"><a class="service" href="#">Our Team</a></li>
+              <li class="menu"><a class="service" href="#">About Us</a></li>
+              <li class="menu"><a class="service" href="#">Contact Us</a></li>
+              <li class="menu"><a class="service" href="#">Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -249,19 +277,21 @@
       </div>
     </footer>
     <script>
-      function toggleDropdown() {
-        document.getElementById("category-dropdown").classList.toggle("show");
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
       }
 
-      // Close dropdown if clicked outside
-      window.onclick = function (event) {
-        if (!event.target.matches(".dropdown-button")) {
-          document.getElementById("category-dropdown").classList.remove("show");
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (e) {
+        if (!e.target.matches(".dropdownbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
         }
       };
-
-      // Show dropdown when toggled
-      document.styleSheets[0].insertRule(".show { display: block; }", 0);
     </script>
   </body>
 </html>
