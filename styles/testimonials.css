@@ -4,6 +4,7 @@
   --black-color: #000;
   --main-color: #005f00;
   --lighter-green: #00c503;
+  --hover-color: #e5feeb;
 }
 * {
   margin: 0;
@@ -150,7 +151,7 @@ body {
 .dropdown-2 {
   position: relative;
 }
-.dropdown-content a {
+.dropdown-content-1 a {
   display: block;
   text-decoration: none;
   color: #00c503;
@@ -169,24 +170,7 @@ body {
   border: none;
   cursor: pointer;
 }
-.dropdownContent {
-  display: none;
-  background-color: var(--white-color);
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  width: 100%;
-}
-.dropdownContent ul li {
-  list-style-type: none;
-}
-.dropdownContent li a {
-  text-decoration: none;
-  color: var(--lighter-green);
-}
-.show {
-  display: block;
-}
-.dropdown-content {
+.dropdown-content-1 {
   display: none;
   position: absolute;
   top: 60px;
@@ -207,16 +191,57 @@ body {
   justify-content: flex-end;
   padding: 5px 10px;
 }
-.dropdown-content a:hover {
+.dropdown-content-1 a:hover {
   background-color: #3e8e41;
   color: var(--white-color);
 }
-.dropdown-2:hover .dropdown-content {
+.dropdown-2:hover .dropdown-content-1 {
   display: block;
 }
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 }
+/* hamburger menu */
+.dropdown-content {
+  display: none;
+  width: 100%;
+  position: absolute;
+  right: -10px;
+  top: 2rem;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content ul li{
+  list-style-type: none;
+}
+.dropdown-content li a{
+  text-decoration: none;
+  color: var(--lighter-green);
+  font-size: 18px;
+}
+.menu a:hover{
+  background: #007900;
+  color: var(--white-color);
+  width: 100%;
+}
+.menu {
+align-self: stretch;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: flex-start;
+padding: 5px 10px;
+}
+.service {
+position: relative;
+letter-spacing: -0.03em;
+line-height: 28px;
+font-weight: 500;
+}
+.show {display: block;}
+/* Testimonials section */
 .what-we-do {
   padding-block: 9rem;
   width: 100%;
@@ -264,12 +289,16 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  box-sizing: border-box;
   gap: 24px;
   text-align: center;
   font-size: 30px;
   color: #333;
-  font-family: "DM Sans";
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.testimonies:hover {
+  background: var(--hover-color);
 }
 .testimonies-child {
   width: 100px;
@@ -283,8 +312,6 @@ body {
   justify-content: center;
 }
 .medcheck-helped-me {
-  width: 343px;
-  position: relative;
   letter-spacing: -0.03em;
   line-height: 36px;
   display: inline-block;
@@ -300,6 +327,25 @@ body {
   font-size: 30px;
   font-weight: 600;
   padding-block: 1rem;
+}
+.rating {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.testimonies:hover .medcheck-helped-parent {
+  transform: translateY(-10px); /* pushes content upward */
+}
+.testimonies:hover .rating {
+  opacity: 1;
+  transform: translateY(0); /* slides the rating up */
+}
+.star {
+  color: var(--lighter-green);
+  margin: 0 2px;
+}
+.star:last-child {
+  opacity: 0.5; /* make the last star lighter */
 }
 /* ===== Footer Styling ===== */
 .footer {
