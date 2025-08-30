@@ -4,6 +4,8 @@
   --black-color: #000;
   --main-color: #005f00;
   --lighter-green: #00c503;
+  --report-color: #009200;
+  --b-color: #b3b3b3;
 }
 * {
   margin: 0;
@@ -201,52 +203,54 @@ body {
 }
 /* Report a product */
 .report-a-product-parent {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   border-radius: 40px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
+  margin-block: 5rem;
   padding: 20px 0px 0px;
-  box-sizing: border-box;
   gap: 60px;
-  text-align: center;
-  font-size: 30px;
   color: #009200;
 }
 .report-a-product {
-  align-self: stretch;
-  position: relative;
   letter-spacing: -0.03em;
   line-height: 36px;
+  color: var(--report-color);
+  font-size: 30px;
 }
 .frame-parent {
-  align-self: stretch;
+  width: 100%;
   border-radius: 50px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 50px;
-  gap: 50px;
-  text-align: left;
+  gap: 70px;
   font-size: 16px;
-  color: #b3b3b3;
+  color: var(--b-color);
 }
-.emails-input-parent {
-  width: 25rem;
+.emails-input-parent,
+.emails-input-group {
+  width: 441px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 24px;
 }
 .emails-input {
+  max-width: 441px;
+  width: 100%;
   align-self: stretch;
   border-radius: 25px;
-  background-color: #fafafa;
+  background-color: var(--white-color);
   border-bottom: 1px solid #808080;
   display: flex;
   flex-direction: row;
@@ -262,7 +266,7 @@ body {
 .frame-group {
   align-self: stretch;
   border-radius: 25px;
-  background-color: #fafafa;
+  background-color: var(--white-color);
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -286,11 +290,9 @@ body {
   padding: 11px 0px;
 }
 .title {
-  position: relative;
   letter-spacing: -0.03em;
   line-height: 24px;
   font-weight: 500;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -300,7 +302,6 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   font-size: 17px;
-  font-family: "SF Pro";
 }
 .label-wrapper {
   background: var(--white-color);
@@ -310,72 +311,71 @@ body {
   justify-content: flex-start;
   padding: 11px 16px;
 }
-select{
+select {
   display: none;
 }
-.label {
+::placeholder {
+  width: 222px;
+  font-size: 16px;
+  letter-spacing: -0.03em;
+  line-height: 24px;
+  color: #b3b3b3;
+}
+.select {
   width: 176px;
-  position: relative;
   letter-spacing: -0.43px;
   line-height: 22px;
   display: flex;
   align-items: center;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   flex-shrink: 0;
+  cursor: pointer;
 }
-.component-27 {
-  width: 441px;
-  border-radius: 10px;
-  background-color: #009200;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-  color: #fff;
-}
-.verify {
-  position: relative;
+.verify-1 {
+  width: 100%;
   letter-spacing: -0.03em;
   line-height: 24px;
   font-weight: 500;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: var(--report-color);
+  padding: 20px;
+  color: var(--white-color);
 }
-.emails-input-group {
-  width: 441px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+.verify {
+  width: 100%;
+  letter-spacing: -0.03em;
+  line-height: 24px;
+  font-weight: 500;
+  border: none;
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: var(--report-color);
+  padding: 20px;
+  color: var(--white-color);
+  display: none;
 }
 .upload-container {
   background-color: rgba(255, 255, 255, 0.3);
   border: 1.5px dashed rgba(166, 166, 166, 0.5);
   height: 194px;
+  max-width: 100%;
   width: 441px;
+  min-width: 100%;
   border-radius: 10px;
-  padding: 20px;
-  margin: 20px auto;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: var(--black-color);
 }
-
-.photocontainer h3 {
-  margin-bottom: 5px;
-  font-size: 18px;
-}
 .upload-container p {
   font-size: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 .upload-photo {
-  position: relative;
   letter-spacing: -0.03em;
   line-height: 24px;
   color: var(--black-color);
@@ -393,73 +393,6 @@ select{
 input[type="file"] {
   display: none;
 }
-/* .frame-container {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  text-align: center;
-  color: #121212;
-}
-
-.report-a-product-frame-wrapper {
-  align-self: stretch;
-  position: relative;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 1.5px dashed rgba(166, 166, 166, 0.5);
-  box-sizing: border-box;
-  height: 194px;
-  overflow: hidden;
-  flex-shrink: 0;
-} */
-/* .report-a-product-frame-parent {
-  position: absolute;
-  top: 45px;
-  left: calc(50% - 104.5px);
-  width: 209px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 25px;
-}
-.frame-parent2 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 5px;
-}
-.tap-to-upload-a-photo-of-the-p-wrapper {
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-  font-size: 14px;
-  color: #000;
-}
-.tap-to-upload {
-white-space: nowrap;
-}
-.upload-wrapper {
-  width: 135px;
-  border-radius: 10px;
-  background-color: #d9d9d9;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  text-align: left;
-  color: #000;
-} */
 /* ===== Footer Styling ===== */
 .footer {
   width: 100%;
@@ -588,4 +521,18 @@ input {
   .hamburger {
     display: block;
   }
+}
+@media (max-width: 800px) {
+  .verify-1 {
+    display: none;
+  }
+  .verify{
+    display: block;
+  }
+  .frame-parent {
+    gap: 30px;
+  }
+  ::placeholder {
+  font-size: 16px;
+}
 }
