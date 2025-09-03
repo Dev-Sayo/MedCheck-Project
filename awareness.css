@@ -18,6 +18,16 @@
 body {
   font-family: "DM Sans", sans-serif;
 }
+.container{
+  display: grid;
+  grid-template-areas: "header" 
+  "main"
+  "Slider"
+  "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+
+}
 .nav-btn a {
   text-decoration: none;
   color: var(--lighter-green);
@@ -194,9 +204,6 @@ body {
 }
 .dropdown:hover .dropbtn {
   background-color: #3e8e41;
-}
-.awareness-page{
-  width: 100%;
 }
 .awareness-container {
   /* display: grid;

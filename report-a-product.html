@@ -7,7 +7,7 @@
     <title>Report a product</title>
   </head>
   <body>
-     <header class="header">
+    <header class="header">
       <div class="logo">
         <div class="logo-parent" id="frameContainer">
           <img class="logo-icon" alt="" src="images/logo.svg" />
@@ -24,15 +24,17 @@
             <a href="#">Awareness</a>
           </div>
         </div>
-        <div class="more-dropdown"><button class="nav-btn">More</button>
-        <div class="more-content">
-          <a href="#">Testimonies</a>
-          <a href="#">Our Teams</a>
-          <a href="#">FAQS</a>
-          <a href="#">History</a>
-          <a href="#">About US</a>
-          <a href="#">Contact Us</a>
-        </div></div>
+        <div class="more-dropdown">
+          <button class="nav-btn">More</button>
+          <div class="more-content">
+            <a href="#">Testimonies</a>
+            <a href="#">Our Teams</a>
+            <a href="#">FAQS</a>
+            <a href="#">History</a>
+            <a href="#">About US</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
       </nav>
       <div class="nav2">
         <!-- bell icon -->
@@ -190,7 +192,23 @@
               /></label>
               <input type="text" placeholder="Description of Issue" />
             </div>
-            <button class="verify-1">Save report</button>
+            <button id="openPopup" class="verify-1">Save report</button>
+            <div class="report-successful-toast" id="popup">
+              <div class="title-and-description">
+                <p class="report-successfully">✅ Report Successfully</p>
+                <div class="thank-you-for-container">
+                  <p class="thank-you-for">
+                    Thank you for helping us keep the community safe. Your
+                    report has been received and will be reviewed by our team.
+                    If necessary, appropriate action will be taken promptly.
+                  </p>
+                  <p class="thank-you-for">
+                    Check your history for your report progress.
+                  </p>
+                </div>
+                <button class="veri-fy" id="closePopup">Done</button>
+              </div>
+            </div>
           </form>
           <form class="emails-input-group">
             <div class="emails-input">
@@ -291,5 +309,22 @@
         <p>&copy; 2025 MedCheck. All Rights Reserved.</p>
       </div>
     </footer>
+<script>
+  const openPopup = document.getElementById("openPopup");
+  const closePopup = document.getElementById("closePopup");
+  const popup = document.getElementById("popup");
+
+  openPopup.addEventListener("click", () => {
+    popup.style.display = "flex"; // show popup
+  });
+
+  // Close if user clicks outside the popup content
+  window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+</script>
+
   </body>
 </html>
