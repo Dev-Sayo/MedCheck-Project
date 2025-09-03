@@ -602,6 +602,9 @@ input {
   font-size: 16px;
   color: #333;
 }
+footer{
+  background: #005f00;
+}
 @media (max-width: 1207px) {
   .testimonial-container {
     height: 100%;
