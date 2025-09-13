@@ -498,6 +498,7 @@ input::placeholder {
 .footer-bottom {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
   justify-content: space-between;
   padding-block: 5rem;
 }
@@ -581,10 +582,17 @@ input::placeholder {
     padding-top: 1rem;
   }
   .footer-bottom {
+   display: block;
+    padding-block: 1rem;
+  }
+  .socials{
     display: block;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    margin-right: 8rem;
+
+  }
+  .legal{
+    display: flex;
+    white-space: nowrap;
+    gap: 3rem;
   }
 }
 @media (max-width: 480px) {
